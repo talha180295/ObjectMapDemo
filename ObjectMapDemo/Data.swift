@@ -10,7 +10,7 @@ import Foundation
 
 struct ApiResponseMultipleData <T:Codable> : Codable {
     var success:Bool
-    var data:[T]
+    var data:[T]?
     var message:String
 }
 

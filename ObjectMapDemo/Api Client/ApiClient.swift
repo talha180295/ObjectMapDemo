@@ -13,10 +13,10 @@ class APIClient {
 
 
 
-    static func getDataRequest(url:URLRequestConvertible,completion:@escaping (AFDataResponse<Any>)->Void) {
+    static func getDataRequest(url:URLRequestConvertible,completion:@escaping (DataResponse<Any>)->Void) {
         
         print("url==\(String(describing: try? url.asURLRequest()))")
-        AF.request(url).responseJSON { (response) in
+        Alamofire.request(url).responseJSON { (response) in
             
             completion(response)
             
@@ -31,7 +31,7 @@ class APIClient {
         print("url==\(String(describing: try? url.asURLRequest()))")
         
         
-        AF.request(url).responseJSON { (response) in
+        Alamofire.request(url).responseJSON { (response) in
             
             
             if let jsonData = response.data{
@@ -44,4 +44,16 @@ class APIClient {
             
         }
     }
+    
+    static func getData(completion:@escaping ()->Void){
+        
+        Alamofire.request(APIRouter.bargainings([:])).responseAPIRes { response in
+            
+            if let aPIRes = response.data {
+                print("aPIRes=\(aPIRes)")
+            }
+        }
+        
+    }
+    
 }

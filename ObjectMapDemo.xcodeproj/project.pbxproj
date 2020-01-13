@@ -18,6 +18,14 @@
 		18B259DE23C7175700E83253 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B259DD23C7175700E83253 /* ApiClient.swift */; };
 		18B259E023C718AF00E83253 /* ApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B259DF23C718AF00E83253 /* ApiRouter.swift */; };
 		18B259E223C7214B00E83253 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B259E123C7214B00E83253 /* Constants.swift */; };
+		18F7D40923CC7DE7009B2E3E /* Bargainings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F7D40823CC7DE7009B2E3E /* Bargainings.swift */; };
+		18F7D40B23CC7E7D009B2E3E /* MainStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F7D40A23CC7E7D009B2E3E /* MainStruct.swift */; };
+		18F7D41323CCB675009B2E3E /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F7D41223CCB675009B2E3E /* ViewController2.swift */; };
+		18F7D41523CCC1DA009B2E3E /* Parkings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F7D41423CCC1DA009B2E3E /* Parkings.swift */; };
+		18F7D41C23CCC31A009B2E3E /* Buyer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F7D41723CCC318009B2E3E /* Buyer.swift */; };
+		18F7D41D23CCC31A009B2E3E /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F7D41823CCC319009B2E3E /* Card.swift */; };
+		18F7D41F23CCC31A009B2E3E /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F7D41A23CCC319009B2E3E /* Details.swift */; };
+		18F7D42123CCC37E009B2E3E /* Seller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F7D42023CCC37E009B2E3E /* Seller.swift */; };
 		3925FA4117E4AFF3CBA4781D /* Pods_ObjectMapDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD088FF95FDD054B4D5089F3 /* Pods_ObjectMapDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +45,14 @@
 		18B259DD23C7175700E83253 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		18B259DF23C718AF00E83253 /* ApiRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRouter.swift; sourceTree = "<group>"; };
 		18B259E123C7214B00E83253 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		18F7D40823CC7DE7009B2E3E /* Bargainings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bargainings.swift; sourceTree = "<group>"; };
+		18F7D40A23CC7E7D009B2E3E /* MainStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStruct.swift; sourceTree = "<group>"; };
+		18F7D41223CCB675009B2E3E /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		18F7D41423CCC1DA009B2E3E /* Parkings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parkings.swift; sourceTree = "<group>"; };
+		18F7D41723CCC318009B2E3E /* Buyer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buyer.swift; sourceTree = "<group>"; };
+		18F7D41823CCC319009B2E3E /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		18F7D41A23CCC319009B2E3E /* Details.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Details.swift; sourceTree = "<group>"; };
+		18F7D42023CCC37E009B2E3E /* Seller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seller.swift; sourceTree = "<group>"; };
 		BD088FF95FDD054B4D5089F3 /* Pods_ObjectMapDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjectMapDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -73,6 +89,7 @@
 		1858A07F23C63D390095E307 /* ObjectMapDemo */ = {
 			isa = PBXGroup;
 			children = (
+				18F7D40723CC7DCB009B2E3E /* Api Structs */,
 				18B259DC23C7174000E83253 /* Api Client */,
 				1858A08023C63D390095E307 /* AppDelegate.swift */,
 				1858A08223C63D390095E307 /* ViewController.swift */,
@@ -80,10 +97,11 @@
 				1858A08723C63D3A0095E307 /* Assets.xcassets */,
 				1858A08923C63D3A0095E307 /* LaunchScreen.storyboard */,
 				1858A08C23C63D3A0095E307 /* Info.plist */,
-				1858A09223C63DCA0095E307 /* Data.swift */,
 				1858A09423C640C50095E307 /* WeatherCell.swift */,
 				1858A09523C640C60095E307 /* WeatherCell.xib */,
 				18B259E123C7214B00E83253 /* Constants.swift */,
+				18F7D41223CCB675009B2E3E /* ViewController2.swift */,
+				1858A09223C63DCA0095E307 /* Data.swift */,
 			);
 			path = ObjectMapDemo;
 			sourceTree = "<group>";
@@ -95,6 +113,20 @@
 				18B259DF23C718AF00E83253 /* ApiRouter.swift */,
 			);
 			path = "Api Client";
+			sourceTree = "<group>";
+		};
+		18F7D40723CC7DCB009B2E3E /* Api Structs */ = {
+			isa = PBXGroup;
+			children = (
+				18F7D40A23CC7E7D009B2E3E /* MainStruct.swift */,
+				18F7D41723CCC318009B2E3E /* Buyer.swift */,
+				18F7D41823CCC319009B2E3E /* Card.swift */,
+				18F7D41A23CCC319009B2E3E /* Details.swift */,
+				18F7D40823CC7DE7009B2E3E /* Bargainings.swift */,
+				18F7D41423CCC1DA009B2E3E /* Parkings.swift */,
+				18F7D42023CCC37E009B2E3E /* Seller.swift */,
+			);
+			path = "Api Structs";
 			sourceTree = "<group>";
 		};
 		7CC9D1479E38B3435C5BFA24 /* Pods */ = {
@@ -125,7 +157,7 @@
 				1858A07923C63D390095E307 /* Sources */,
 				1858A07A23C63D390095E307 /* Frameworks */,
 				1858A07B23C63D390095E307 /* Resources */,
-				AE8EC9D90D6F716F5A93B8EC /* [CP] Embed Pods Frameworks */,
+				4DD039C92D2BDC62D310B90B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -184,7 +216,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		AE8EC9D90D6F716F5A93B8EC /* [CP] Embed Pods Frameworks */ = {
+		4DD039C92D2BDC62D310B90B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -231,12 +263,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				1858A09623C640C60095E307 /* WeatherCell.swift in Sources */,
+				18F7D40923CC7DE7009B2E3E /* Bargainings.swift in Sources */,
 				18B259E023C718AF00E83253 /* ApiRouter.swift in Sources */,
 				1858A08323C63D390095E307 /* ViewController.swift in Sources */,
+				18F7D41523CCC1DA009B2E3E /* Parkings.swift in Sources */,
 				1858A09323C63DCA0095E307 /* Data.swift in Sources */,
+				18F7D42123CCC37E009B2E3E /* Seller.swift in Sources */,
+				18F7D41323CCB675009B2E3E /* ViewController2.swift in Sources */,
 				18B259E223C7214B00E83253 /* Constants.swift in Sources */,
+				18F7D41D23CCC31A009B2E3E /* Card.swift in Sources */,
 				1858A08123C63D390095E307 /* AppDelegate.swift in Sources */,
+				18F7D40B23CC7E7D009B2E3E /* MainStruct.swift in Sources */,
 				18B259DE23C7175700E83253 /* ApiClient.swift in Sources */,
+				18F7D41F23CCC31A009B2E3E /* Details.swift in Sources */,
+				18F7D41C23CCC31A009B2E3E /* Buyer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

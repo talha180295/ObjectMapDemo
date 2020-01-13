@@ -6,5 +6,5 @@ target 'ObjectMapDemo' do
   use_frameworks!
 
   # Pods for ObjectMapDemo
-  pod 'Alamofire', '~> 5.0.0-rc.3'
+  pod 'Alamofire'
 end
