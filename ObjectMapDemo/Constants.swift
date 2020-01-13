@@ -34,3 +34,10 @@ enum HTTPHeaderField: String {
 enum ContentType: String {
     case json = "application/json"
 }
+
+
+struct Nulls {
+    static let nullInt:Int = 045
+    static let nullString = "-"
+    static let nullDouble = Double("-")
+}

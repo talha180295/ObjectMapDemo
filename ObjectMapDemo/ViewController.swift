@@ -15,9 +15,9 @@ import Alamofire
 class ViewController: UIViewController {
     
     
-    var pData = [ParkingData]()
+    var pData = [Parkings]()
     var bData = [Bargainings]()
-    var parkingApiResponse:ApiResponseMultipleData<ParkingData>?
+    var parkingApiResponse:ResponseDataArray<Parkings>?
     var bargainingApiResponse:ResponseDataArray<Bargainings>?
     
     @IBOutlet weak var weatherTbl: UITableView!
@@ -32,7 +32,10 @@ class ViewController: UIViewController {
         registerCell()
         
         //Get Bargainings
-        getBargainings()
+//        getBargainings()
+        
+        //Get Parkings
+        getParkings()
         
     }
     
@@ -42,21 +45,50 @@ class ViewController: UIViewController {
         weatherTbl.register(UINib(nibName: "WeatherCell", bundle: nil), forCellReuseIdentifier: "WeatherCell")
     }
     
+    func getParkings(){
+
+        let params:[String:Any]  = [ : ]
+
+        Alamofire.request(APIRouter.parkings(params)).parkingRes { response in
+
+            switch response.result {
+            case .success:
+
+                if response.result.value?.success ?? false {
+
+                    if let val = response.result.value?.data {
+                        //                print("bData=\(bData)")
+                        self.pData = val
+                        self.weatherTbl.reloadData()
+                    }
+
+                }
+                else{
+                    print("Server Message=\(response.result.value?.message ?? "-" )")
+
+                }
+
+            case .failure(let error):
+                print("ERROR==\(error)")
+            }
+        }
+    }
+
     
     func getBargainings(){
         
         let params:[String:Any]  = [ : ]
         
-        Alamofire.request(APIRouter.bargainings(params)).responseAPIRes { response in
+        Alamofire.request(APIRouter.bargainings(params)).bargainingRes{ response in
             
             switch response.result {
                 case .success:
                     
                     if response.result.value?.success ?? false {
                         
-                        if let bData = response.result.value?.data {
+                        if let val = response.result.value?.data {
                             //                print("bData=\(bData)")
-                            self.bData = bData
+                            self.bData = val
                             self.weatherTbl.reloadData()
                         }
                         
@@ -82,7 +114,7 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return bData.count
+        return pData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -90,7 +122,7 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
         let cell = weatherTbl.dequeueReusableCell(withIdentifier: "WeatherCell") as! WeatherCell
         //        let cell = weatherTbl.dequeueReusableCell(withIdentifier: "WeatherCell")!
         
-        cell.setData(day: bData[indexPath.row].statusText ?? "-", condition: bData[indexPath.row].statusText ?? "-", temp: bData[indexPath.row].id ?? 0 )
+        cell.setData(day: pData[indexPath.row].parkingTypeText ?? Nulls.nullString, condition: pData[indexPath.row].parkingTypeText ?? Nulls.nullString, temp: pData[indexPath.row].parkingExtraFee ?? Nulls.nullInt)
         
         return  cell;
     }

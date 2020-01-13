@@ -25,7 +25,7 @@ class WeatherCell: UITableViewCell {
         
         self.day.text = day
         self.condition.text = condition
-        self.temp.text = String(temp)
+        self.temp.text = String(UnicodeScalar(UInt8(temp)))
         
     }
     

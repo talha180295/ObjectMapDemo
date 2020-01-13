@@ -45,15 +45,14 @@ class APIClient {
         }
     }
     
-    static func getData(completion:@escaping ()->Void){
-        
-        Alamofire.request(APIRouter.bargainings([:])).responseAPIRes { response in
-            
-            if let aPIRes = response.data {
-                print("aPIRes=\(aPIRes)")
-            }
-        }
-        
-    }
-    
+//    static func getData(completion:@escaping ()->Void){
+//        
+//        Alamofire.request(APIRouter.bargainings([:])).responseAPIRes { response in
+//            
+//            if let aPIRes = response.result.value {
+//                print("aPIRes=\(aPIRes)")
+//            }
+//        }
+//        
+//    }
 }
