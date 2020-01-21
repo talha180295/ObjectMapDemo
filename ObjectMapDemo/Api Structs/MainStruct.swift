@@ -22,6 +22,11 @@ struct ResponseData <T:Codable> : Codable {
     var message:String
 }
 
+struct PostResponseData: Codable {
+    var success:Bool
+    var message:String
+}
+
 
 // MARK: - Alamofire response handlers
 
@@ -44,13 +49,17 @@ extension DataRequest {
     }
     
     @discardableResult
-    func bargainingRes(queue: DispatchQueue? = nil, completionHandler: @escaping (DataResponse<ResponseDataArray<Bargainings>>) -> Void) -> Self {
+    func bargainingResponse(queue: DispatchQueue? = nil, completionHandler: @escaping (DataResponse<ResponseDataArray<Bargaining>>) -> Void) -> Self {
         return responseDecodable(queue: queue, completionHandler: completionHandler)
     }
     
     @discardableResult
-    func parkingRes(queue: DispatchQueue? = nil, completionHandler: @escaping (DataResponse<ResponseDataArray<Parkings>>) -> Void) -> Self {
+    func parkingResponse(queue: DispatchQueue? = nil, completionHandler: @escaping (DataResponse<ResponseDataArray<Parking>>) -> Void) -> Self {
         return responseDecodable(queue: queue, completionHandler: completionHandler)
     }
     
+    @discardableResult
+    func postParkingResponse(queue: DispatchQueue? = nil, completionHandler: @escaping (DataResponse<PostResponseData>) -> Void) -> Self {
+        return responseDecodable(queue: queue, completionHandler: completionHandler)
+    }
 }

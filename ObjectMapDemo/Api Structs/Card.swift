@@ -16,14 +16,14 @@ struct Card: Codable {
 
     enum CodingKeys: String, CodingKey {
         case id
-        case userID
-        case stripeCardID
-        case lastFour
+        case userID = "user_id"
+        case stripeCardID = "stripe_card_id"
+        case lastFour = "last_four"
         case brand, country
-        case expMonth
-        case expYear
-        case createdAt
-        case updatedAt
-        case deletedAt
+        case expMonth = "exp_month"
+        case expYear = "exp_year"
+        case createdAt = "created_at"
+        case updatedAt = "updated_at"
+        case deletedAt = "deleted_at"
     }
 }

@@ -8,14 +8,14 @@ import Foundation
 
 
 // MARK: - Bargainings
-struct Bargainings: Codable {
+struct Bargaining: Codable {
     let id, parkingID, buyerID, status: Int?
     let offer: Double?
     let direction: Int?
     let createdAt, updatedAt, deletedAt, statusText: String?
     let buyer: Buyer?
     let seller: Seller?
-    let parking: Parkings?
+    let parking: Parking?
     
     enum CodingKeys: String, CodingKey {
         case id

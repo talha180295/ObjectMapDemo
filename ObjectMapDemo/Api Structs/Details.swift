@@ -20,15 +20,15 @@ struct Details: Codable {
 
     enum CodingKeys: String, CodingKey {
         case id
-        case firstName
-        case lastName
-        case averageRating
+        case firstName = "first_name"
+        case lastName = "last_name"
+        case averageRating = "average_rating"
         case phone, address, image
-        case isVerified
-        case emailUpdates
-        case isSocialLogin
+        case isVerified = "is_verified"
+        case emailUpdates = "email_updates"
+        case isSocialLogin = "is_social_login"
         case wallet
-        case imageURL
-        case fullName
+        case imageURL = "image_url"
+        case fullName = "full_name"
     }
 }

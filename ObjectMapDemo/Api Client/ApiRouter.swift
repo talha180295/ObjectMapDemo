@@ -12,17 +12,21 @@ import Alamofire
 enum APIRouter: URLRequestConvertible {
     
   
-    case parkingsWithoutToken([String:Any])
-    case parkings([String:Any])
-    case parkingsById(id:Int)
-    case bargainings([String:Any])
+    case getParkingsWithoutToken([String:Any])
+    case getParkings([String:Any])
+    case getParkingsById(id:Int)
+    case getBargainings([String:Any])
+    case postParking([String:Any])
     
     // MARK: - HTTPMethod
     private var method: HTTPMethod {
         switch self {
         
-        case .parkingsWithoutToken,.parkings,.parkingsById,.bargainings:
+        case .getParkingsWithoutToken,.getParkings,.getParkingsById,.getBargainings:
             return .get
+            
+        case .postParking:
+            return .post
         }
     }
     
@@ -30,14 +34,15 @@ enum APIRouter: URLRequestConvertible {
     private var path: String {
         switch self {
        
-        case .parkingsWithoutToken:
+        case .getParkingsWithoutToken:
             return "/parkings-without-token"
-
-        case .parkings(_):
+        case .postParking:
             return "/parkings"
-        case .parkingsById(let id):
+        case .getParkings(_):
+            return "/parkings"
+        case .getParkingsById(let id):
             return "/parkings/\(id)"
-        case .bargainings(_):
+        case .getBargainings(_):
             return "/bargainings"
             
         }
@@ -47,14 +52,15 @@ enum APIRouter: URLRequestConvertible {
     private var parameters: Parameters? {
         switch self {
        
-        case .parkingsWithoutToken(let params):
+        case .getParkingsWithoutToken(let params):
             return (params)
-            
-        case .parkings(let params):
+        case .postParking(let params):
             return (params)
-        case .parkingsById:
+        case .getParkings(let params):
+            return (params)
+        case .getParkingsById:
             return nil
-        case .bargainings(let params):
+        case .getBargainings(let params):
             return (params)
         }
     }

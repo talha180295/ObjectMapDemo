@@ -21,12 +21,14 @@ class WeatherCell: UITableViewCell {
     }
 
  
-    func setData(day:String, condition:String,temp:Int){
+    func setData(day:String, condition:String,temp:Double){
         
         self.day.text = day
         self.condition.text = condition
-        self.temp.text = String(UnicodeScalar(UInt8(temp)))
+        self.temp.text = String(temp)
         
+//        String(temp)
+//        String(UnicodeScalar(temp))
     }
     
 }

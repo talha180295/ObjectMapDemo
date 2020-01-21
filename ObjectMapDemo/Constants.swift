@@ -16,7 +16,7 @@ struct K {
     }
    
     
-    static let AccessToken = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9wZWVyLXBhcmtpbmcuYXBwcy5mb21hcmttZWRpYS5jb21cL2FwaVwvdjFcL3JlZnJlc2giLCJpYXQiOjE1Nzg5MDI2MjQsImV4cCI6MTU4MDEyNDU3NCwibmJmIjoxNTc4OTE0OTc0LCJqdGkiOiIzemMwd2tkdnRxUEZWaU9IIiwic3ViIjoxMSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.L4JXbU88wwjZOOTym_lsO9a_auu5YLZf7oafP1ZXyOY"
+    static let AccessToken = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9wZWVyLXBhcmtpbmcuYXBwcy5mb21hcmttZWRpYS5jb21cL2FwaVwvdjFcL3JlZnJlc2giLCJpYXQiOjE1Nzk2MDY5NjYsImV4cCI6MTU4MDgxNjYxOCwibmJmIjoxNTc5NjA3MDE4LCJqdGkiOiI3M0JlUmJOVmhXRmQ5WjczIiwic3ViIjo1MCwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.37MilTx0BQKulsT7rBncb6KleoaRiaoxQv7CxGmSxRk"
     
     struct APIParameterKey {
         static let password = "password"
@@ -37,7 +37,7 @@ enum ContentType: String {
 
 
 struct Nulls {
-    static let nullInt:Int = 045
+    static let nullInt:Int = 0
     static let nullString = "-"
-    static let nullDouble = Double("-")
+    static let nullDouble:Double = 0.0
 }

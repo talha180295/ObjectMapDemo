@@ -10,11 +10,11 @@ struct Buyer: Codable {
     let id: Int?
     let name, email, createdAt: String?
     let details: Details?
-    let card: Card?
+    let card: [Card?]
 
     enum CodingKeys: String, CodingKey {
         case id, name, email
-        case createdAt
-        case details, card // 
+        case createdAt = "created_at"
+        case details, card
     }
 }
