@@ -33,11 +33,14 @@ class ViewController: UIViewController ,UIImagePickerControllerDelegate, UINavig
         
         registerCell()
         
+        
+        
+        
         //Get Bargainings
 //        getBargainings()
         
         //Get Parkings
-        getParkings()
+//        getParkings()
         
         
         //Post Parking
@@ -194,8 +197,8 @@ class ViewController: UIViewController ,UIImagePickerControllerDelegate, UINavig
     
     @IBAction func open_cam_btn(_ sender: UIButton) {
         print("cam")
-        
-        self.showAlert()
+//        self.showAlert()
+        self.getParkingsNew()
     }
     
     @IBAction func postData(_ sender: UIButton) {
@@ -203,7 +206,7 @@ class ViewController: UIViewController ,UIImagePickerControllerDelegate, UINavig
         print("image====\(String(describing: self.imgData))")
         
         if let img = self.imgData{
-            postParkingWithMultiparts(url: APIRouter.postParking(params), imageData: img, params: self.params)
+//            postParkingWithMultiparts(url: APIRouter.postParking(params), imageData: img, params: self.params)
         }
     }
     
@@ -236,6 +239,40 @@ class ViewController: UIViewController ,UIImagePickerControllerDelegate, UINavig
         }
     }
     
+    func getParkingsNew(){
+        
+        let params:[String:Any]  = [ "is_schedule" : 1 ]
+        
+        
+        APIClient.getData(url: APIRouter.getParkings(params), dec: ResponseDataArray<Parking>.self) { (response,error) in
+            
+            if(response != nil){
+                if let success = response?.success {
+                    //                    print("Succes=\(success)")
+                    Helper().showToast(message: "Succes=\(success)", controller: self)
+                    if let val = response?.data {
+                        //                print("bData=\(bData)")
+                        self.pData = val
+                        self.myTableView.reloadData()
+                    }
+                }
+                else{
+                    //                    print("Server Message=\(response?.message ?? "-" )")
+                    Helper().showToast(message: "Server Message=\(response?.message ?? "-" )", controller: self)
+                }
+            }
+            else if(error != nil){
+                //                print("Error=\(error?.localizedDescription ?? "" )")
+                Helper().showToast(message: "Error=\(error?.localizedDescription ?? "" )", controller: self)
+            }
+            else{
+                //                print("Nor Response and Error!!")
+                Helper().showToast(message: "Nor Response and Error!!", controller: self)
+            }
+            
+        }
+        
+    }
     
     
 }

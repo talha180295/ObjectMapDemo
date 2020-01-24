@@ -16,7 +16,7 @@ struct K {
     }
    
     
-    static let AccessToken = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9wZWVyLXBhcmtpbmcuYXBwcy5mb21hcmttZWRpYS5jb21cL2FwaVwvdjFcL3JlZnJlc2giLCJpYXQiOjE1Nzk2MDY5NjYsImV4cCI6MTU4MDgxNjYxOCwibmJmIjoxNTc5NjA3MDE4LCJqdGkiOiI3M0JlUmJOVmhXRmQ5WjczIiwic3ViIjo1MCwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.37MilTx0BQKulsT7rBncb6KleoaRiaoxQv7CxGmSxRk"
+    static let AccessToken = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9wZWVyLXBhcmtpbmcuYXBwcy5mb21hcmttZWRpYS5jb21cL2FwaVwvdjFcL3JlZnJlc2giLCJpYXQiOjE1Nzk4NzE0NjUsImV4cCI6MTU4MTA4NTMxMCwibmJmIjoxNTc5ODc1NzEwLCJqdGkiOiJUU2NwUEt6U2YxUWNRSmxXIiwic3ViIjo0LCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.AclvO3gsFGFfsZfI8yCoLOfSTAojqetze92lwLmXMDo"
     
     struct APIParameterKey {
         static let password = "password"

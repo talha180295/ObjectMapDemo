@@ -11,8 +11,6 @@ import Alamofire
 
 class APIClient {
 
-
-
     static func getDataRequest(url:URLRequestConvertible,completion:@escaping (DataResponse<Any>)->Void) {
         
         print("url==\(String(describing: try? url.asURLRequest()))")
@@ -26,7 +24,7 @@ class APIClient {
     }
     
     
-    static func getData<T:Decodable>(url:URLRequestConvertible,dec:T.Type,completion:@escaping (T)->Void) {
+    static func getData<T:Decodable>(url:URLRequestConvertible,dec:T.Type,completion:@escaping (T? ,Error?)->Void) {
         
         print("url==\(String(describing: try? url.asURLRequest()))")
         
@@ -34,12 +32,25 @@ class APIClient {
         Alamofire.request(url).responseJSON { (response) in
             
             
-            if let jsonData = response.data{
-                let response = try! JSONDecoder().decode(dec.self, from: jsonData)
+            if response.result.isSuccess {
                 
-                
-                completion(response)
+                if let jsonData = response.data{
+                    let response = try! JSONDecoder().decode(dec.self, from: jsonData)
+                    
+                    
+                    completion(response, nil)
+                }
+
             }
+            else{
+                
+                completion(nil,response.error!)
+            }
+            
+//            if response.result == nil{
+//
+//            }
+//
             
             
         }

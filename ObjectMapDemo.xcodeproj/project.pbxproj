@@ -18,6 +18,7 @@
 		18B259DE23C7175700E83253 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B259DD23C7175700E83253 /* ApiClient.swift */; };
 		18B259E023C718AF00E83253 /* ApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B259DF23C718AF00E83253 /* ApiRouter.swift */; };
 		18B259E223C7214B00E83253 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B259E123C7214B00E83253 /* Constants.swift */; };
+		18D30D6623DB3303008889FB /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D30D6523DB3303008889FB /* Helper.swift */; };
 		18F7D40923CC7DE7009B2E3E /* Bargaining.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F7D40823CC7DE7009B2E3E /* Bargaining.swift */; };
 		18F7D40B23CC7E7D009B2E3E /* MainStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F7D40A23CC7E7D009B2E3E /* MainStruct.swift */; };
 		18F7D41323CCB675009B2E3E /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F7D41223CCB675009B2E3E /* ViewController2.swift */; };
@@ -45,6 +46,7 @@
 		18B259DD23C7175700E83253 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		18B259DF23C718AF00E83253 /* ApiRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRouter.swift; sourceTree = "<group>"; };
 		18B259E123C7214B00E83253 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		18D30D6523DB3303008889FB /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		18F7D40823CC7DE7009B2E3E /* Bargaining.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bargaining.swift; sourceTree = "<group>"; };
 		18F7D40A23CC7E7D009B2E3E /* MainStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStruct.swift; sourceTree = "<group>"; };
 		18F7D41223CCB675009B2E3E /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 		1858A07F23C63D390095E307 /* ObjectMapDemo */ = {
 			isa = PBXGroup;
 			children = (
+				18D30D6423DB32A0008889FB /* Helper */,
 				18F7D40723CC7DCB009B2E3E /* Api Structs */,
 				18B259DC23C7174000E83253 /* Api Client */,
 				1858A08023C63D390095E307 /* AppDelegate.swift */,
@@ -113,6 +116,14 @@
 				18B259DF23C718AF00E83253 /* ApiRouter.swift */,
 			);
 			path = "Api Client";
+			sourceTree = "<group>";
+		};
+		18D30D6423DB32A0008889FB /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				18D30D6523DB3303008889FB /* Helper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		18F7D40723CC7DCB009B2E3E /* Api Structs */ = {
@@ -269,6 +280,7 @@
 				18F7D41523CCC1DA009B2E3E /* Parking.swift in Sources */,
 				1858A09323C63DCA0095E307 /* Data.swift in Sources */,
 				18F7D42123CCC37E009B2E3E /* Seller.swift in Sources */,
+				18D30D6623DB3303008889FB /* Helper.swift in Sources */,
 				18F7D41323CCB675009B2E3E /* ViewController2.swift in Sources */,
 				18B259E223C7214B00E83253 /* Constants.swift in Sources */,
 				18F7D41D23CCC31A009B2E3E /* Card.swift in Sources */,
